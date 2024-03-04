@@ -27,8 +27,8 @@ const stbleTestnet = defineChain({
     contracts: {
       multicall3: {
         // https://raw.githubusercontent.com/mds1/multicall/main/src/Multicall3.sol
-        address: "0x16A2FBCD44cDF4F282039F2770C5362Cc62CAccD",
-        blockCreated: 1318095,
+          address: "0x3ed62137c5DB927cb137c26455969116BF0c23Cb",
+          blockCreated: 2318,
       },
     },
   });
