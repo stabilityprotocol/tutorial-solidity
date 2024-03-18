@@ -1,14 +1,21 @@
 const { JsonRpcProvider } = require('ethers');
 
-const provider = new JsonRpcProvider("https://free.testnet.stabilityprotocol.com");
+const providerTest = new JsonRpcProvider("https://free.testnet.stabilityprotocol.com");
+const providerGTN = new JsonRpcProvider("https://gtn.stabilityprotocol.com")
 
-const logCurrentBlockNumber = async () => {
+const logCurrentBlockNumbers = async () => {
   try {
-    const blockNumber = await provider.getBlockNumber();
-    console.log("Current block number:", blockNumber);
+    const blockNumber = await providerTest.getBlockNumber();
+    console.log("Current block number on Stability Testnet:", blockNumber);
   } catch (error) {
-    console.error("Error fetching the current block number:", error);
+    console.error("Error fetching the current block number on Stability Testnet:", error);
+  }
+  try {
+    const blockNumber = await providerGTN.getBlockNumber();
+    console.log("Current block number on Stability GTN:", blockNumber);
+  } catch (error) {
+    console.error("Error fetching the current block number on Stability GTN:", error);
   }
 };
 
-logCurrentBlockNumber();
+logCurrentBlockNumbers();
