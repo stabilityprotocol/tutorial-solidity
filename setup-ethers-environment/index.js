@@ -1,7 +1,7 @@
 const { JsonRpcProvider } = require('ethers');
 
 const providerTest = new JsonRpcProvider("https://free.testnet.stabilityprotocol.com");
-const providerGTN = new JsonRpcProvider("https://gtn.stabilityprotocol.com")
+const providerGTN = new JsonRpcProvider("https://gtn.stabilityprotocol.com");
 
 const logCurrentBlockNumbers = async () => {
   try {
