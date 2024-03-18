@@ -12,9 +12,9 @@ const logCurrentBlockNumbers = async () => {
   }
   try {
     const blockNumber = await providerGTN.getBlockNumber();
-    console.log("Current block number on Stability GTN:", blockNumber);
+    console.log("Current block number on Global Trust Network (GTN):", blockNumber);
   } catch (error) {
-    console.error("Error fetching the current block number on Stability GTN:", error);
+    console.error("Error fetching the current block number on Global Trust Network (GTN):", error);
   }
 };
 
